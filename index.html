@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cricket Auction Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Cricket Auction Game</h1>
+
+    <form id="teamForm">
+      <h2>Add Team</h2>
+      <input type="text" id="teamName" placeholder="Team Name" required />
+      <input type="number" id="teamBudget" placeholder="Budget" required />
+      <button type="submit">Add Team</button>
+    </form>
+
+    <form id="playerForm">
+      <h2>Add Player</h2>
+      <input type="text" id="playerName" placeholder="Player Name" required />
+      <input type="number" id="basePrice" placeholder="Base Price" required />
+      <button type="submit">Add Player</button>
+    </form>
+
+    <div class="team-section">
+      <h2>Teams</h2>
+      <ul id="teamList"></ul>
+    </div>
+
+    <div class="player-section">
+      <h2>Players</h2>
+      <ul id="playerList"></ul>
+    </div>
+
+    <form id="auctionForm">
+      <h2>Start Auction</h2>
+      <select id="auctionPlayer"></select>
+      <select id="auctionTeam"></select>
+      <input type="number" id="bidAmount" placeholder="Bid Amount" required />
+      <button type="submit">Place Bid</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>Bid</th>
+          <th>Team</th>
+        </tr>
+      </thead>
+      <tbody id="auctionResults"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
